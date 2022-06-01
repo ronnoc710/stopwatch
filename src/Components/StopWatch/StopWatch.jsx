@@ -38,7 +38,7 @@ export default function StopWatch() {
     };
 
     return (
-        <div>
+        <div class="stop-watch">
           <Timer time={time} />
           <Controls 
             active = {isActive}

@@ -3,24 +3,24 @@ import "./Controls.css";
 
 export default function controlButtons(props) {
     const startButton = (
-        <div onClick={props.handleStart}>
+        <div class="btn" id="start-pause-resume" onClick={props.handleStart}>
             Start
         </div>
     );
     const activeButtons = (
-        <div>
-            <div onClick={props.handleReset}>
+        <div class="active-btns">
+            <div class="btn" onClick={props.handleReset}>
               Reset
             </div>
-            <div onClick={props.handlePauseResume}>
+            <div class="btn" id="start-pause-resume" onClick={props.handlePauseResume}>
               {props.isPaused ? "Resume" : "Pause"}
             </div>
         </div>
     );
 
     return (
-        <div>
-            <div>{props.active ? activeButtons : startButton}</div>
+        <div class="control-btns">
+            {props.active ? activeButtons : startButton}
         </div>
     )
 }
