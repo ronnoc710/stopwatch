@@ -1,7 +1,7 @@
 import React from "react";
 import "./Controls.css";
 
-export const controlButtons = (props) => {
+export default function controlButtons(props) {
     const startButton = (
         <div onClick={props.handleStart}>
             Start
